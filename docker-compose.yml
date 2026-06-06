@@ -5,9 +5,9 @@ services:
     ports:
       - "127.0.0.1:27801:8080"
     volumes:
-      - ./notes:/usr/src/app/content    # 你的 Obsidian 笔记目录
-      - ./quartz.config.ts:/usr/src/app/quartz.config.ts:ro  # 自定义配置
-      - ./quartz.layout.ts:/usr/src/app/quartz.layout.ts:ro  # 自定义布局
+      - ./notes:/usr/src/app/content
+      - ./quartz.config.ts:/usr/src/app/quartz.config.ts:ro
+      - ./quartz.layout.ts:/usr/src/app/quartz.layout.ts:ro
       - ./abcjs.js:/usr/src/app/quartz/static/abcjs.js
       - ./Head.tsx:/usr/src/app/quartz/components/Head.tsx:ro
     restart: unless-stopped
